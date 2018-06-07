@@ -11,5 +11,5 @@ app.use(express.static('public'));
 app.use(router)
 
 app.listen(3003,function () {
-  console.log('数据库链接成功,端口号3003')
+  console.log('数据库链接成功,端口号3003');
 })
