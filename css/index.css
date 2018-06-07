@@ -130,92 +130,124 @@
 }
 .wrap .content .box1 {
   width: 100%;
-  margin-top: 50px;
+  min-width: 1200px;
 }
-.wrap .content .box1 p {
+.wrap .content .box1 .box1_wrap {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0 0;
+  clear: both;
+}
+.wrap .content .box1 .box1_wrap .box1_inner {
+  width: 100%;
+}
+.wrap .content .box1 .box1_wrap .box1_inner .box1_inner_header {
   text-align: center;
+}
+.wrap .content .box1 .box1_wrap .box1_inner .box1_inner_header .span1 {
+  display: block;
   color: #3d3838;
   font-weight: 800;
-  font-family: "Microsoft YaHei";
   font-size: 28px;
+  font-family: "Microsoft YaHei";
 }
-.wrap .content .box1 .serviceType {
-  display: flex;
-  justify-content: center;
-}
-.wrap .content .box1 .serviceType a {
-  padding: 10px;
-  color: #3d3838;
+.wrap .content .box1 .box1_wrap .box1_inner .box1_inner_header .span2 {
+  display: block;
+  font-family: "幼圆";
   font-size: 22px;
+  color: #3d3838;
+  margin-top: 15px;
 }
-.wrap .content .box1 .lookMore {
-  float: right;
-  margin: -25px 130px 0 0;
+.wrap .content .box1 .box1_wrap .box1_inner .box1_inner_header .span2 a {
+  color: #3d3838;
+}
+.wrap .content .box1 .box1_wrap .box1_inner .box1_content .box1_content_header {
+  text-align: right;
+}
+.wrap .content .box1 .box1_wrap .box1_inner .box1_content .box1_content_header .lookMore {
+  position: relative;
+  bottom: 22px;
+}
+.wrap .content .box1 .box1_wrap .box1_inner .box1_content .box1_content_header .lookMore a {
   color: #898989;
   font-size: 18px;
+  font-family: "幼圆";
 }
-.wrap .content .box1 .show {
-  width: 100%;
-  display: flex;
-  margin-left: 80px;
+.wrap .content .box1 .box1_wrap .box1_inner .box1_content .box1_content_inner {
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
 }
-.wrap .content .box1 .show .bj {
-  margin-left: 54px;
+.wrap .content .box1 .box1_wrap .box1_inner .box1_content .box1_content_inner .ServiceBorder {
+  float: left;
+  padding: 10px;
+  width: 230px;
+  border: 1px solid #eaeaea;
+  margin: 0 5px;
+  background: #fff;
+  cursor: pointer;
+  height: 345px;
+  position: relative;
+  min-height: 1px;
+  box-sizing: border-box;
 }
-.wrap .content .box1 .show .bj img {
+.wrap .content .box1 .box1_wrap .box1_inner .box1_content .box1_content_inner .ServiceBorder:hover {
+  box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.5);
+  transition: box-shadow 0.5s;
+}
+.wrap .content .box1 .box1_wrap .box1_inner .box1_content .box1_content_inner .ServiceBorder img {
+  vertical-align: middle;
+  border: 0;
   width: 210px;
   height: 210px;
 }
-.wrap .content .box1 .show .bj .serviceName {
+.wrap .content .box1 .box1_wrap .box1_inner .box1_content .box1_content_inner .ServiceBorder .serviceName {
   font-size: 16px;
-  padding: 10px 0;
+  padding: 8px 0;
   font-weight: 800;
-  height: 15px;
+  color: #000;
+  box-sizing: border-box;
   overflow: hidden;
-  width: 100%;
+  width: 101%;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.wrap .content .box1 .show .bj .description {
+.wrap .content .box1 .box1_wrap .box1_inner .box1_content .box1_content_inner .ServiceBorder .description {
   color: #929292;
-  padding: 5px 0;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 14px;
-  line-height: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   word-break: break-all;
-  width: 210px;
+  font-size: 13px;
+  line-height: 18px;
+  height: 50px;
+  box-sizing: border-box;
 }
-.wrap .content .box1 .show .bj .price {
+.wrap .content .box1 .box1_wrap .box1_inner .box1_content .box1_content_inner .ServiceBorder .price {
   font-size: 14px;
   padding: 5px 5px;
   font-weight: 600;
+  height: 20px;
   line-height: 20px;
   color: #fb474f;
 }
-.wrap .content .box1 .show .bj .price .btn {
-  margin-left: 55px;
-  height: 10px;
+.wrap .content .box1 .box1_wrap .box1_inner .box1_content .box1_content_inner .ServiceBorder .price .btn {
+  float: right;
+  padding: 0;
+  width: 76px;
+  height: 24px;
   line-height: 22px;
   text-align: center;
   background: #fb474f;
   border-radius: 5px;
   color: #fff;
-}
-.wrap .content .box1 .fws {
-  width: 1200px;
-  line-height: 32px;
-  padding: 10px;
-  border: 1px solid #e5e5e5;
-  margin: 20px auto 0;
-  text-align: justify;
-}
-.wrap .content .box1 .fws a {
-  margin: 0 6px;
-  color: #3d3838;
-}
-.wrap .content .box1 .fws a:first-child {
-  margin-left: 0;
+  font-size: 14px;
 }
 .wrap .content .baozhang {
   text-align: center;

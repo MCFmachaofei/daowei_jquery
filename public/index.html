@@ -18,7 +18,7 @@
       <div class="headNav">
         <ul>
           <li>
-            <a href="#">首页</a>
+            <a href="./index.html">首页</a>
           </li>
           <li>
             <a href="#">到位APP</a>
@@ -119,86 +119,7 @@
           </a></li>
         </ul>
       </div>
-      <div class="box1">
-        <p>家庭保洁</p>
-        <span class="serviceType">
-          <a href="#">小时工</a>
-           <a href="#">开荒保洁</a>
-           <a href="#">擦玻璃</a>
-           <a href="#">深度保洁</a>
-           <a href="#">杀虫除螨</a>
-           <a href="#">家居养护</a>
-        </span>
-        <span class="lookMore">
-          <a href="#">
-           更多服务>
-          </a>
-        </span>
-        <div class="show">
-          <div class="bj">
-            <img src="./images/jtbj/1.jpg" alt="">
-            <div class="serviceName">家庭保洁</div>
-            <div class="description">金牌保洁，携带工具上门，2小时起订 下单须知：
-              1.下单后请...</div>
-            <div class="price">
-              <span>30</span>元/小时
-              <span class="btn">查看详情</span>
-            </div>
-          </div>
-        </div>
-        <div class="fws">
-          <a href="#">e城e家家政</a>
-          <a href="#">云家政</a>
-          <a href="#">管家帮</a>
-          <a href="#">宝宝天天乐</a>
-          <a href="#">万得福家政</a>
-          <a href="#">天下无虫</a>
-          <a href="#">和瑞万家</a>
-          <a href="#">e家洁</a>
-          <a href="#">韩管家</a>
-          <a href="#">超级阿姨</a>
-          <a href="#">洁道夫</a>
-          <a href="#">水动力除螨</a>
-          <a href="#">杀虫OK哥</a>
-          <a href="#">绿色家缘</a>
-          <a href="#">家务宝</a>
-          <a href="#">洁亿佳</a>
-          <a href="#">实佳家政</a>
-          <a href="#">佳美家家政</a>
-          <a href="#">水净化除螨</a>
-          <a href="#">叮当到家</a>
-          <a href="#">君达保洁</a>
-          <a href="#">如意管家</a>
-          <a href="#">福运佳家政</a>
-          <a href="#">绿巨人虫控</a>
-          <a href="#">奥美林保洁</a>
-          <a href="#">清云阳光除甲醛</a>
-          <a href="#">爱家保洁</a>
-          <a href="#">美利清洁</a>
-          <a href="#">亦彩家政</a>
-          <a href="#">海易达虫控</a>
-          <a href="#">可立尔环保</a>
-          <a href="#">万泓保洁</a>
-          <a href="#">净美洁</a>
-          <a href="#">速达客</a>
-          <a href="#">宜诺康</a>
-          <a href="#">美居管家</a>
-          <a href="#">奥美达家政</a>
-          <a href="#">嘉欲保洁</a>
-          <a href="#">汇鑫伟业</a>
-          <a href="#">易联管家</a>
-          <a href="#">洁美</a>
-          <a href="#">东方神盾·甲醛克星</a>
-          <a href="#">小羽佳家政</a>
-          <a href="#">一刻钟生活服务</a>
-          <a href="#">鑫达鸿信保洁</a>
-          <a href="#">我擦保洁</a>
-          <a href="#">顺安馨佳家政</a>
-          <a href="#">好运康家政</a>
-          <a href="#">百街邦</a>
-          <a href="#">家e净</a>
-        </div>
-      </div>
+      <div id="content_wrap"></div>
       <div class="baozhang">
         <h2>到位<i>服务</i>保障</h2>
         <p>到位平台担保交易安全，交易未成功100%退款</p>
@@ -335,29 +256,38 @@
 <script id="temp1" type="text/html">
 {{each data}}
 <div class="box1">
-  <p>{{$value.serviceIndex}}</p>
-  <span class="serviceType">
-          <a href="#">{{each $value.serviceType}}</a>
-        </span>
-  <span class="lookMore">
-          <a href="#">
-           更多服务>
-          </a>
-        </span>
-  <div class="show">
-    <div class="bj">
-      <img src={{$value.imgUrl}} >
-      <div class="serviceName">{$value.serviceName}}</div>
-      <div class="description">{{$value.description}}</div>
-      <div class="price">
-        <span>{{$value.price}}</span>元/小时
-        <span class="btn">查看详情</span>
+  <div class="box1_wrap">
+    <div class="box1_inner">
+      <div class="box1_inner_header">
+        <span class="span1">{{$value.serviceIndex}}</span>
+        <span class="span2">
+              {{each $value.serviceType}}
+                <a href="javascript:;">{{$value}}</a>
+              {{/each}}
+            </span>
+      </div>
+      <div class="box1_content">
+        <div class="box1_content_header">
+              <span class="lookmore">
+                <a href="javascript:;">更多服务></a>
+              </span>
+        </div>
+        <div class="box1_content_inner">
+          {{each $value.shopList}}
+          <div class="ServiceBorder">
+            <img src={{$value.imgUrl}} alt="">
+            <p class="serviceName">{{$value.serviceName}}</p>
+            <div class="description">{{$value.description}}</div>
+            <div class="price">
+              <span style="font-size: 20px">{{$value.price}}</span>
+              元/小时
+              <span class="btn">查看详情</span>
+            </div>
+          </div>
+          {{/each}}
+        </div>
       </div>
     </div>
-    {{/each}}
-  </div>
-  <div class="fws">
-    <a href="#">e城e家家政</a>
   </div>
 </div>
   {{/each}}
@@ -366,7 +296,7 @@
   $(function () {
     $.get('http://localhost:3003/index',function (data) {
       console.log(data);
-      $('.show').html(template('temp1',{data:data}))
+      $('#content_wrap').html(template('temp1',{data:data}))
     })
   })
 </script>
