@@ -54,7 +54,6 @@
   padding: 24px 27px;
   width: 100%;
   height: 420px;
-  border: 1px solid #000;
   overflow: hidden;
 }
 .wrap .content .lunbo-container .hd {
@@ -107,26 +106,31 @@
   padding-top: 20px;
 }
 .wrap .content .banner-nav .navName {
-  background: #000;
+  background: #3d3838;
   width: 100px;
   text-align: center;
   height: 420px;
-  line-height: 20px;
+  line-height: 28px;
 }
 .wrap .content .banner-nav .navName li {
-  height: 40px;
+  height: 43px;
 }
 .wrap .content .banner-nav .navName li ul {
   display: none;
-  color: #fb474f;
-  margin: -25px 0 0 100px;
-  width: 80px;
+  color: #3d3838;
+  margin: 20px 0 0 100px;
+  width: 120px;
   height: 420px;
   background: #fff;
   opacity: 0.9;
+  position: absolute;
+  top: 0;
 }
 .wrap .content .banner-nav .navName li:hover ul {
   display: block;
+}
+.wrap .content .banner-nav .navName li:hover ul li {
+  color: #121212;
 }
 .wrap .content .box1 {
   width: 100%;

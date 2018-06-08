@@ -18,7 +18,7 @@
       <div class="headNav">
         <ul>
           <li>
-            <a href="./index.html">首页</a>
+            <a href="#">首页</a>
           </li>
           <li>
             <a href="#">到位APP</a>
@@ -58,65 +58,6 @@
       <!-- 轮播图区域 end -->
       <div class="banner-nav">
         <ul class="navName">
-          <li>
-            <a href="#">家庭保洁</a>
-            <ul>
-              <li>小时工</li>
-              <li>开荒保洁</li>
-              <li>擦玻璃</li>
-              <li>深度保洁</li>
-              <li>杀虫除螨</li>
-              <li>家居养护</li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-            上门按摩
-          </a>
-            <ul>
-              <li>中医推拿</li>
-              <li>油压SPA</li>
-              <li>局部理疗</li>
-              <li>足疗套餐</li>
-              <li>母婴保健</li>
-              <li>美体塑形</li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">上门维修</a>
-            <ul>
-              <li>手机维修</li>
-              <li>家电维修</li>
-              <li>电脑维修</li>
-              <li>家庭维修</li>
-              <li>管道疏通</li>
-              <li>开锁换锁</li>
-              <li>安装打孔</li>
-              <li>装修换新</li>
-              <li>空气净化</li>
-            </ul>
-          </li>
-          <li><a href="#">
-            家电清洗
-          </a></li>
-          <li><a href="#">
-            衣物洗护
-          </a></li>
-          <li><a href="#">
-            搬家速运
-          </a></li>
-          <li><a href="#">
-            美容美妆
-          </a></li>
-          <li><a href="#">
-            养车用车
-          </a></li>
-          <li><a href="#">
-           上门医护
-          </a></li>
-          <li><a href="#">
-            保姆月嫂
-          </a></li>
         </ul>
       </div>
       <div id="content_wrap"></div>
@@ -292,11 +233,24 @@
 </div>
   {{/each}}
 </script>
+<script id="temp2" type="text/html">
+{{each data}}
+<li>
+  <a href="#">{{$value.serviceIndex}}</a>
+  <ul>
+    {{each $value.serviceType}}
+    <li>{{$value}}</li>
+    {{/each}}
+  </ul>
+</li>
+{{/each}}
+</script>
 <script type="text/javascript">
   $(function () {
     $.get('http://localhost:3003/index',function (data) {
       console.log(data);
       $('#content_wrap').html(template('temp1',{data:data}))
+      $('.navName').html(template('temp2',{data:data}))
     })
   })
 </script>
