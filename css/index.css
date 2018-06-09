@@ -39,10 +39,10 @@
   font-weight: 700;
   color: #121212;
 }
-.wrap .head .headNav ul li:last-child {
+.wrap .head .headNav ul li .login {
   border: 1px solid #7e8c8d;
   background: #e94840;
-  border-radius: 5px;
+  border-radius: 8px;
   color: #fff;
 }
 .wrap .content {
